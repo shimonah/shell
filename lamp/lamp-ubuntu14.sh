@@ -4,7 +4,7 @@ sudo apt-get update
 #Easy way to install Lamp server. For Ubuntu 14.04 LTS it install php 5.5.9 tha is no longer support with community
 sudo apt-get install lamp-server^
 
-#Separate installing each element
+#Separate installing of each element
 
 # Installing Apache2
 sudo apt-get install apache2
