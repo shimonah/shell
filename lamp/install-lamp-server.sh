@@ -8,7 +8,7 @@ sudo apt-get install lamp-server^
 
 # PHP 5.6
 # First of all php
-sudo add-apt-repository ppa:ondrej/php5-5.
+sudo add-apt-repository ppa:ondrej/php5-5.6
 # If you get an error here, you need to install python-software-properties first (and then do the line above again):
 sudo apt-get update
 sudo apt-get install python-software-properties
