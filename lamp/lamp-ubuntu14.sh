@@ -8,7 +8,10 @@ sudo apt-get install lamp-server^
 
 # PHP 5.6
 # First of all php
+sudo apt-get update
 sudo add-apt-repository ppa:ondrej/php
+# Update with new packages
+sudo apt-get update
 # If you get an error here, you need to install python-software-properties first (and then do the line above again):
 sudo apt-get update
 sudo apt-get install python-software-properties
@@ -20,7 +23,10 @@ sudo apt-get -y install php5.6 php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-
 php -v
 
 #PHP 7.0
+sudo apt-get update
 sudo add-apt-repository ppa:ondrej/php
+# update with new packages
+sudo apt-get update
 # If you get an error here, you need to install python-software-properties first (and then do the line above again):
 sudo apt-get update
 sudo apt-get install python-software-properties
@@ -39,10 +45,6 @@ sudo service apache2 restart
 
 # Install MySQL (5.5), mysql module for PHP and PDO stuff
 sudo apt-get install mysql-server
-
-# !ATTENTION! This command can differ depending what PHP version you have
-# PHP 5.x
-sudo apt-get install php5.6-mysql
 # Provide a new mysql root password when asked. Then restart the server
 sudo service apache2 restart
 
