@@ -30,3 +30,19 @@ sudo apt-get update
 sudo apt-get install php
 # Check
 php -v
+
+# Installing Apache2
+sudo apt-get install apache2
+
+# Install MySQL (5.5), mysql module for PHP and PDO stuff
+sudo apt-get install mysql-server
+sudo apt-get install php5-mysql
+# Provide a new mysql root password when asked. Then restart the server
+sudo service apache2 restart
+
+# Install phpmyadmin
+sudo apt-get install phpmyadmin
+# Select “apache2” when asked, select with SPACE and confirm with ENTER. 
+# Press ENTER when asked for auto-configuration and provide a new password 
+# for the phpmyadmin root user and mysql root passwords when asked for password 
+# (You can use the same for this, to keep things simple).
