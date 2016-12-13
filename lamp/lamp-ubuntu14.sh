@@ -14,12 +14,10 @@ sudo service apache2 restart
 
 # PHP 5.6 also you can try this if you want to upgrate your version of PHP
 sudo add-apt-repository ppa:ondrej/php
-# Update with new packages
-sudo apt-get update
 # If you get an error here, you need to install python-software-properties first (and then do the line above again):
 sudo apt-get update
 sudo apt-get install python-software-properties
-# Update
+# Update with new packages
 sudo apt-get update
 # Install php 5.6
 sudo apt-get -y install php5.6 php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip
@@ -28,12 +26,10 @@ php -v
 
 #PHP 7.0 also you can try this if you want to upgrate your version of PHP
 sudo add-apt-repository ppa:ondrej/php
-# update with new packages
-sudo apt-get update
 # If you get an error here, you need to install python-software-properties first (and then do the line above again):
 sudo apt-get update
 sudo apt-get install python-software-properties
-# Update
+# Update with new packages
 sudo apt-get update
 # Install
 sudo apt-get install -y php7.0 libapache2-mod-php7.0 php7.0 php7.0-common php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
