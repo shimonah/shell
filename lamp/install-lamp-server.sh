@@ -33,6 +33,9 @@ php -v
 
 # Installing Apache2
 sudo apt-get install apache2
+# Enable mod_rewrite and restart apache2
+sudo a2enmod rewrite
+sudo service apache2 restart
 
 # Install MySQL (5.5), mysql module for PHP and PDO stuff
 sudo apt-get install mysql-server
