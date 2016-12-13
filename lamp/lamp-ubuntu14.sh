@@ -12,8 +12,7 @@ sudo apt-get install apache2
 sudo a2enmod rewrite
 sudo service apache2 restart
 
-# PHP 5.6
-sudo apt-get update
+# PHP 5.6 also you can try this if you want to upgrate your version of PHP
 sudo add-apt-repository ppa:ondrej/php
 # Update with new packages
 sudo apt-get update
@@ -27,8 +26,7 @@ sudo apt-get -y install php5.6 php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-
 # Check
 php -v
 
-#PHP 7.0
-sudo apt-get update
+#PHP 7.0 also you can try this if you want to upgrate your version of PHP
 sudo add-apt-repository ppa:ondrej/php
 # update with new packages
 sudo apt-get update
