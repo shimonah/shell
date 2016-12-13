@@ -15,7 +15,7 @@ sudo apt-get install python-software-properties
 # Update
 sudo apt-get update
 # Install php 5.6
-sudo apt-get install php5
+sudo apt-get install php5 php5-gd php5-curl
 # Check
 php -v
 
@@ -39,12 +39,19 @@ sudo service apache2 restart
 
 # Install MySQL (5.5), mysql module for PHP and PDO stuff
 sudo apt-get install mysql-server
-sudo apt-get install php-mysql
+
+# !ATTENTION! This command can differ depending what PHP version you have
+# PHP 5.x
+sudo apt-get install php5.6-mysql
+# PHP 7.0
+sudo apt-get install php7.0-mysql
 # Provide a new mysql root password when asked. Then restart the server
 sudo service apache2 restart
 
 # Install phpmyadmin
 sudo apt-get install phpmyadmin
+sudo php5enmod mcrypt
+sudo service apache2 restart
 # Select “apache2” when asked, select with SPACE and confirm with ENTER. 
 # Press ENTER when asked for auto-configuration and provide a new password 
 # for the phpmyadmin root user and mysql root passwords when asked for password 
