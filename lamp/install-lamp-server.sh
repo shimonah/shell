@@ -39,7 +39,7 @@ sudo service apache2 restart
 
 # Install MySQL (5.5), mysql module for PHP and PDO stuff
 sudo apt-get install mysql-server
-sudo apt-get install php5-mysql
+sudo apt-get install php-mysql
 # Provide a new mysql root password when asked. Then restart the server
 sudo service apache2 restart
 
