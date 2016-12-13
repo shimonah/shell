@@ -36,7 +36,7 @@ sudo apt-get install -y php7.0 libapache2-mod-php7.0 php7.0 php7.0-common php7.0
 # Check
 php -v
 
-# Install MySQL (5.5), mysql module for PHP and PDO stuff
+# Install MySQL (5.5)
 sudo apt-get install mysql-server
 # Provide a new mysql root password when asked. Then restart the server
 sudo service apache2 restart
