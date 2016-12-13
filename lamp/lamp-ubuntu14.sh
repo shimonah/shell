@@ -1,13 +1,18 @@
 # This code for Ubuntu 14.04 LTS
 sudo apt-get update
 
-#Easy way to install Lamp server. For Ubuntu 14.04 LTS it install php 5.5.9
+#Easy way to install Lamp server. For Ubuntu 14.04 LTS it install php 5.5.9 tha is no longer support with community
 sudo apt-get install lamp-server^
 
 #Separate installing each element
 
+# Installing Apache2
+sudo apt-get install apache2
+# Enable mod_rewrite and restart apache2
+sudo a2enmod rewrite
+sudo service apache2 restart
+
 # PHP 5.6
-# First of all php
 sudo apt-get update
 sudo add-apt-repository ppa:ondrej/php
 # Update with new packages
@@ -36,12 +41,6 @@ sudo apt-get update
 sudo apt-get install -y php7.0 libapache2-mod-php7.0 php7.0 php7.0-common php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
 # Check
 php -v
-
-# Installing Apache2
-sudo apt-get install apache2
-# Enable mod_rewrite and restart apache2
-sudo a2enmod rewrite
-sudo service apache2 restart
 
 # Install MySQL (5.5), mysql module for PHP and PDO stuff
 sudo apt-get install mysql-server
