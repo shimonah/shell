@@ -9,14 +9,14 @@ sudo service apache2 restart
 # Adding repository
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
-sudo apt-get install php7.1 php7.1-common
+sudo apt-get install -y php7.1 php7.1-common
 # Install the additional packages
-sudo apt-get install php7.1-curl php7.1-xml php7.1-zip php7.1-gd php7.1-mysql php7.1-mbstring
+sudo apt-get install -y php7.1-curl php7.1-xml php7.1-zip php7.1-gd php7.1-mysql php7.1-mbstring
 # Test PHP version
 php -v
 sudo service apache2 restart
 #Installing MySQL
-sudo apt-get install mysql-server
+sudo apt-get install -y mysql-server
 # Provide a new mysql root password when asked. Then restart the server
 sudo service apache2 restart
 # Install phpmyadmin
@@ -26,8 +26,9 @@ cd /usr/share
 # check up here for latest versions https://www.phpmyadmin.net/
 sudo wget https://files.phpmyadmin.net/phpMyAdmin/4.6.5.2/phpMyAdmin-4.6.5.2-all-languages.zip
 # Unzip dowloaded file
-unzip phpMyAdmin-4.6.5.2-all-languages.zip
+sudo unzip phpMyAdmin-4.6.5.2-all-languages.zip
 # Rename the folder
-mv phpMyAdmin-4.6.5.2-all-languages phpmyadmin
+sudo mv phpMyAdmin-4.6.5.2-all-languages phpmyadmin
 # Change premissions
-chmod -R 0755 phpmyadmin
+sudo chmod -R 0755 phpmyadmin
+# Notice
