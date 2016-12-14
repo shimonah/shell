@@ -87,8 +87,4 @@ Alias /phpmyadmin "/usr/share/phpmyadmin/"
 </Directory>
 # Restart Apache2
 sudo service apache2 restart
-
-
-
-
-
+# Enjoy!
