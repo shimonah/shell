@@ -43,7 +43,8 @@ sudo apt-get install python-software-properties
 # Update with new packages
 sudo apt-get update
 # Install php 5.6
-sudo apt-get install php5.6 php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip
+sudo apt-get install -y php5.6 php5.6-common
+sudo apt-get install -y php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip
 # Check
 php -v
 
@@ -55,7 +56,8 @@ sudo apt-get install python-software-properties
 # Update with new packages
 sudo apt-get update
 # Install
-sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0 php7.0-common php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
+sudo apt-get install -y php7.0 php7.0-common
+sudo apt-get install -y libapache2-mod-php7.0 php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
 # Check
 php -v
 
