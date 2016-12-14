@@ -32,5 +32,29 @@ php -v
 # Installing MySQL
 sudo apt install mysql-server
 
-# Installing phpMyAdmin
-sudo apt install phpmyadmin php-mbstring php-gettext
+# Install phpmyadmin
+# goto to directory where phpMyAdmin will be installed
+cd /usr/share
+# Download the version you need
+# check up here for latest versions https://www.phpmyadmin.net/
+sudo wget https://files.phpmyadmin.net/phpMyAdmin/4.6.5.2/phpMyAdmin-4.6.5.2-all-languages.zip
+# Unzip dowloaded file
+unzip phpMyAdmin-4.6.5.2-all-languages.zip
+# Rename the folder
+mv phpMyAdmin-4.6.5.2-all-languages phpmyadmin
+# Change premissions
+chmod -R 0755 phpmyadmin
+# Configure apache2 file
+sudo nano /etc/apache2/sites-available/000-default.conf
+# Uncommet the line with ServerName and write:
+ServerName localhost
+# Anywhere after "DocumentRoot /var/www/html" insert these line:
+Alias /phpmyadmin "/usr/share/phpmyadmin/"
+<Directory "/usr/share/phpmyadmin/">
+     Order allow,deny
+     Allow from all
+     Require all granted
+</Directory>
+# Restart Apache2
+sudo service apache2 restart
+# Enjoy!
