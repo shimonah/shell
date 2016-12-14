@@ -71,11 +71,11 @@ cd /usr/share
 # check up here for latest versions https://www.phpmyadmin.net/
 sudo wget https://files.phpmyadmin.net/phpMyAdmin/4.6.5.2/phpMyAdmin-4.6.5.2-all-languages.zip
 # Unzip dowloaded file
-unzip phpMyAdmin-4.6.5.2-all-languages.zip
+sudo unzip phpMyAdmin-4.6.5.2-all-languages.zip
 # Rename the folder
-mv phpMyAdmin-4.6.5.2-all-languages phpmyadmin
+sudo mv phpMyAdmin-4.6.5.2-all-languages phpmyadmin
 # Change premissions
-chmod -R 0755 phpmyadmin
+sudo chmod -R 0755 phpmyadmin
 # Configure apache2 file
 sudo nano /etc/apache2/sites-available/000-default.conf
 # Uncommet the line with ServerName and write:
