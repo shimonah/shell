@@ -15,6 +15,8 @@ sudo apt-get purge bcmwl-kernel-source
 sudo apt-get update
 # Now use the pci.id you found in the grid below to find the method to install your driver.
 sudo apt-get install <package>
+# And then reboot system
+
 # Table 
 #pci.id                     12.04 LTS                             14.04 LTS and Later
 
