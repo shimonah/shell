@@ -34,7 +34,7 @@ sudo chmod -R 0755 phpmyadmin
 sudo chmod -R 775 /var/www/html
 # Notice
 echo '
-Thing you must do your self:
+Things you must do your self:
 Keep this tab for notice and open a new one Ctr+Alt+T
 # Configure apache2 file
 sudo nano /etc/apache2/mods-available/dir.conf
