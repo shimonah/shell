@@ -11,6 +11,13 @@ sudo apt-get install apache2
 # Enable mod_rewrite and restart apache2
 sudo a2enmod rewrite
 sudo service apache2 restart
+# Configure apache2 file
+sudo nano /etc/apache2/mods-available/dir.conf
+# Write 'index.php' at first place
+<IfModule mod_dir.c>
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml inde$
+</IfModule>
+
 
 # If you already have installed PHP version that you don't need:
 # List your current php packages
@@ -67,7 +74,7 @@ unzip phpMyAdmin-4.6.5.2-all-languages.zip
 mv phpMyAdmin-4.6.5.2-all-languages phpmyadmin
 # Change premissions
 chmod -R 0755 phpmyadmin
-# Configer apache2 file
+# Configure apache2 file
 sudo nano /etc/apache2/sites-available/000-default.conf
 # Uncommet the line with ServerName and write:
 ServerName localhost
