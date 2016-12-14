@@ -56,10 +56,32 @@ sudo apt-get install mysql-server
 sudo service apache2 restart
 
 # Install phpmyadmin
-sudo apt-get install phpmyadmin
-sudo php5enmod mcrypt
+# goto to directory where php<yAdmin will be installed
+cd /usr/share
+# Download the version you need
+# check up here for latest versions https://www.phpmyadmin.net/
+sudo wget https://files.phpmyadmin.net/phpMyAdmin/4.6.5.2/phpMyAdmin-4.6.5.2-all-languages.zip
+# Unzip dowloaded file
+unzip phpMyAdmin-4.6.5.2-all-languages.zip
+# Rename the folder
+mv phpMyAdmin-4.6.5.2-all-languages phpmyadmin
+# Change premissions
+chmod -R 0755 phpmyadmin
+# Configer apache2 file
+sudo nano /etc/apache2/sites-available/000-default.conf
+# Uncommet the line with ServerName and write:
+ServerName localhost
+# Anywhere after "DocumentRoot /var/www/html" insert these line:
+Alias /phpmyadmin "/usr/share/phpmyadmin/"
+<Directory "/usr/share/phpmyadmin/">
+     Order allow,deny
+     Allow from all
+     Require all granted
+</Directory>
+# Restart Apache2
 sudo service apache2 restart
-# Select “apache2” when asked, select with SPACE and confirm with ENTER. 
-# Press ENTER when asked for auto-configuration and provide a new password 
-# for the phpmyadmin root user and mysql root passwords when asked for password 
-# (You can use the same for this, to keep things simple).
+
+
+
+
+
