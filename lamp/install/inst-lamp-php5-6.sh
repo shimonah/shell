@@ -9,9 +9,10 @@ sudo service apache2 restart
 # Adding repository
 sudo add-apt-repository ppa:ondrej/php
 sudo apt-get update
-sudo apt-get install -y php7.1 php7.1-common
-# Install the additional packages
-sudo apt-get install -y php7.1-curl php7.1-xml php7.1-zip php7.1-gd php7.1-mysql php7.1-mbstring
+# Install php 5.6
+sudo apt-get install -y php5.6 php5.6-common
+# Install additional packages
+sudo apt-get install -y php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip
 # Test PHP version
 php -v
 sudo service apache2 restart
