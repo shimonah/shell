@@ -19,6 +19,11 @@ sudo apt update
 sudo apt install python-software-properties
 # Update with new packages
 sudo apt update
+# List your current PHP packages
+dpkg -l | grep php | tee packages.txt
+# Depending on how you use PHP with the web server, you will probably need to turn the web server off.
+# If you have version of PHP that you don't need
+sudo apt-get purge php7.0 php7.0-common
 # Install php 5.6
 sudo apt -y install php5.6 php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip
 # Check
