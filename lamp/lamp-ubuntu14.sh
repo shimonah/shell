@@ -17,6 +17,8 @@ sudo nano /etc/apache2/mods-available/dir.conf
 <IfModule mod_dir.c>
         DirectoryIndex index.php index.html index.cgi index.pl index.xhtml inde$
 </IfModule>
+# Restart Apache2
+sudo service apache2 restart
 
 
 # If you already have installed PHP version that you don't need:
