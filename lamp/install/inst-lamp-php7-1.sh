@@ -33,3 +33,35 @@ sudo mv phpMyAdmin-4.6.5.2-all-languages phpmyadmin
 sudo chmod -R 0755 phpmyadmin
 sudo chmod -R 775 /var/www/html
 # Notice
+echo '
+Thing you must do your self:
+Keep this tab for notice and open a new one Ctr+Alt+T
+
+# Configure apache2 file
+sudo nano /etc/apache2/mods-available/dir.conf
+
+# Write 'index.php' at first place
+<IfModule mod_dir.c>
+        DirectoryIndex index.php index.html index.cgi index.pl index.xhtml inde$
+</IfModule>
+
+# Configure another apache2 file
+sudo nano /etc/apache2/sites-available/000-default.conf
+
+# Uncommet the line with ServerName and write:
+ServerName localhost
+
+# Anywhere after "DocumentRoot /var/www/html" insert these line:
+Alias /phpmyadmin "/usr/share/phpmyadmin/"
+
+<Directory "/usr/share/phpmyadmin/">
+     Order allow,deny
+     Allow from all
+     Require all granted
+</Directory>
+
+# Restart Apache2
+sudo service apache2 restart
+
+# Enjoy!
+';
