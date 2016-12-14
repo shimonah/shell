@@ -65,7 +65,7 @@ sudo apt-get install mysql-server
 sudo service apache2 restart
 
 # Install phpmyadmin
-# goto to directory where php<yAdmin will be installed
+# goto to directory where phpMyAdmin will be installed
 cd /usr/share
 # Download the version you need
 # check up here for latest versions https://www.phpmyadmin.net/
