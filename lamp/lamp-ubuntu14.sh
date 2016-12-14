@@ -12,7 +12,21 @@ sudo apt-get install apache2
 sudo a2enmod rewrite
 sudo service apache2 restart
 
-# PHP 5.6 also you can try this if you want to upgrate your version of PHP
+# If you already have installed PHP version that you don't need:
+# List your current php packages
+dpkg -l | grep php | tee packages.txt
+# Choose thoose that you don't need and purge for example PHP 5.6
+sudo apt-get purge php5.6 php5.6-common
+# And then install the version you need with packages
+# After installing your version of PHP may need to reboot apache2
+# For this use
+a2dissite 'name of your site'
+sudo service apache2 reload
+a2ensite 'name of you site'
+sudo service apache2 reload
+sudo service aapche2 restart
+
+# PHP 5.6
 sudo add-apt-repository ppa:ondrej/php
 # If you get an error here, you need to install python-software-properties first (and then do the line above again):
 sudo apt-get update
@@ -24,7 +38,7 @@ sudo apt-get -y install php5.6 php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-
 # Check
 php -v
 
-#PHP 7.0 also you can try this if you want to upgrate your version of PHP
+#PHP 7.0 
 sudo add-apt-repository ppa:ondrej/php
 # If you get an error here, you need to install python-software-properties first (and then do the line above again):
 sudo apt-get update
