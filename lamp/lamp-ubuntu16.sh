@@ -10,7 +10,8 @@ sudo apt install apache2
 
 # Installing PHP 7.0
 # Ubuntu 16.04's PHP packages now default to v7.0. 
-sudo apt install -y php7.0 libapache2-mod-php7.0 php7.0 php7.0-common php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
+sudo apt install -y php7.0 php7.0-common
+sudo apt install -y libapache2-mod-php7.0 php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
 
 # PHP 5.6 
 sudo add-apt-repository ppa:ondrej/php
