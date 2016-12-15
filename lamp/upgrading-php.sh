@@ -18,3 +18,5 @@ php -v
 # If you have another version of PHP
 # After 'php' without spacing enter your version of PHP (e.g. 'php5.6 php5.6-common')
 sudo apt-get purge php7.0 php7.0-common
+# After installing go into php.ini file and turn
+# short_open_tag = On display_errors = On display_startap_errors = On
