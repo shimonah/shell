@@ -63,7 +63,7 @@ Alias /phpmyadmin "/usr/share/phpmyadmin/"
 # Restart Apache2
 sudo service apache2 restart
 # 
-sudo adduser alexey www-data
-chown alexey:www-data -R /var/www/html
+sudo adduser $USER www-data
+chown $USER:www-data -R /var/www/html
 chmod -R 775 /var/www/html
 # Enjoy!
