@@ -12,6 +12,8 @@ sudo apt install apache2
 # Ubuntu 16.04's PHP packages now default to v7.0. 
 sudo apt install -y php7.0 php7.0-common
 sudo apt install -y libapache2-mod-php7.0 php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
+# After installing go into php.ini file and turn
+# short_open_tag = On display_errors = On display_startap_errors = On
 
 # PHP 5.6 
 sudo add-apt-repository ppa:ondrej/php
@@ -29,6 +31,8 @@ sudo apt-get purge php7.0 php7.0-common
 sudo apt -y install php5.6 php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip
 # Check
 php -v
+# After installing go into php.ini file and turn
+# short_open_tag = On display_errors = On display_startap_errors = On
 
 # Installing MySQL
 sudo apt install mysql-server
