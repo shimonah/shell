@@ -47,6 +47,8 @@ sudo apt-get install -y php5.6 php5.6-common
 sudo apt-get install -y php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip
 # Check
 php -v
+# After installing go into php.ini file and turn
+# short_open_tag = On display_errors = On display_startap_errors = On
 
 #PHP 7.0 
 sudo add-apt-repository ppa:ondrej/php
@@ -60,6 +62,8 @@ sudo apt-get install -y php7.0 php7.0-common
 sudo apt-get install -y libapache2-mod-php7.0 php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
 # Check
 php -v
+# After installing go into php.ini file and turn
+# short_open_tag = On display_errors = On display_startap_errors = On
 
 # Install MySQL (5.5)
 sudo apt-get install mysql-server
