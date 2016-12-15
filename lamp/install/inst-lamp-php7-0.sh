@@ -53,6 +53,9 @@ Alias /phpmyadmin "/usr/share/phpmyadmin/"
      Allow from all
      Require all granted
 </Directory>
+# After installing go into php.ini file and turn
+# short_open_tag = On display_errors = On display_startap_errors = On
+
 # Restart Apache2
 sudo service apache2 restart
 # Enjoy!
