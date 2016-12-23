@@ -8,3 +8,4 @@ sudo rm *
 sudo nano /etc/default/apport
 # and rewrite
 enabled=0
+# Although disabling apport is not recommended.
