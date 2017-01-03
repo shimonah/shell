@@ -4,7 +4,7 @@ sudo apt update
 sudo apt install -y apache2
 # Enabling mod_rewite
 sudo a2enmod rewrite
-sudo service apache2 restart
+sudo systemctl restart apache2
 # Installing PHP 7.0
 # Adding repository
 sudo add-apt-repository ppa:ondrej/php
@@ -14,11 +14,11 @@ sudo apt install -y php7.0 php7.0-common
 sudo apt install -y libapache2-mod-php7.0 php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
 # Test PHP version
 php -v
-sudo service apache2 restart
+sudo systemctl restart apache2
 #Installing MySQL
 sudo apt install -y mysql-server
 # Provide a new mysql root password when asked. Then restart the server
-sudo service apache2 restart
+sudo systemctl restart apache2
 # Install phpmyadmin
 # goto to directory where phpMyAdmin will be installed
 cd /usr/share
@@ -59,6 +59,6 @@ Alias /phpmyadmin "/usr/share/phpmyadmin/"
 # After installing go into php.ini file and turn
 # short_open_tag = On display_errors = On display_startap_errors = On
 # Restart Apache2
-sudo service apache2 restart
+sudo systemctl restart apache2
 # Enjoy!
 ';
