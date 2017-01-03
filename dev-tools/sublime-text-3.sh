@@ -2,6 +2,6 @@
 # Add repository
 sudo add-apt-repository ppa:webupd8team/sublime-text-3
 # Update packages
-sudo apt-get update
+sudo apt update
 # Install Sublime-Text-3
-sudo apt-get install -y sublime-text-installer
+sudo apt install -y sublime-text-installer
