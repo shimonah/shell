@@ -1,22 +1,22 @@
-# Auto install Lamp server with PHP version 7.1
-sudo apt-get update
+# Auto install Lamp server with PHP version 7.0
+sudo apt update
 # Install Apache2
-sudo apt-get install -y apache2
+sudo apt install -y apache2
 # Enabling mod_rewite
 sudo a2enmod rewrite
 sudo service apache2 restart
-# Installing PHP 7.1
+# Installing PHP 7.0
 # Adding repository
 sudo add-apt-repository ppa:ondrej/php
-sudo apt-get update
-sudo apt-get install -y php7.0 php7.0-common
+sudo apt update
+sudo apt install -y php7.0 php7.0-common
 # Install the additional packages
-sudo apt-get install -y libapache2-mod-php7.0 php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
+sudo apt install -y libapache2-mod-php7.0 php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
 # Test PHP version
 php -v
 sudo service apache2 restart
 #Installing MySQL
-sudo apt-get install -y mysql-server
+sudo apt install -y mysql-server
 # Provide a new mysql root password when asked. Then restart the server
 sudo service apache2 restart
 # Install phpmyadmin
