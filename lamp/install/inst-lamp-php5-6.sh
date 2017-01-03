@@ -34,8 +34,8 @@ sudo mv phpMyAdmin-4.6.5.2-all-languages phpmyadmin
 sudo chmod -R 0755 phpmyadmin
 #
 sudo adduser $USER www-data
-chown $USER:www-data -R /var/www/html
-chmod -R 775 /var/www/html
+sudo chown $USER:www-data -R /var/www/html
+sudo chmod -R 775 /var/www/html
 # Notice
 echo '
 Things you must do yourself:
