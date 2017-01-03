@@ -1,23 +1,23 @@
 # Auto install Lamp server with PHP version 5.6
-sudo apt-get update
+sudo apt update
 # Install Apache2
-sudo apt-get install -y apache2
+sudo apt install -y apache2
 # Enabling mod_rewite
 sudo a2enmod rewrite
 sudo service apache2 restart
 # Installing PHP 5.6
 # Adding repository
 sudo add-apt-repository ppa:ondrej/php
-sudo apt-get update
+sudo apt update
 # Install php 5.6
-sudo apt-get install -y php5.6 php5.6-common
+sudo apt install -y php5.6 php5.6-common
 # Install additional packages
-sudo apt-get install -y php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip
+sudo apt install -y php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip
 # Test PHP version
 php -v
 sudo service apache2 restart
 #Installing MySQL
-sudo apt-get install -y mysql-server
+sudo apt install -y mysql-server
 # Provide a new mysql root password when asked. Then restart the server
 sudo service apache2 restart
 # Install phpmyadmin
