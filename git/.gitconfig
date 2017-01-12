@@ -1,4 +1,4 @@
-# aliases for .gitconfig file
+# aliases for .gitconfig file in $HOME
 
 [alias]
         co = checkout
