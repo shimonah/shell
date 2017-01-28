@@ -20,3 +20,26 @@ mysql> GRANT ALL PRIVILEGES ON magento_dev.* TO 'mage'@'localhost';
 #checking user rights
 mysql -u mage -p 'password'
 mysql> SHOW DATABASES;
+
+# Magento uses the mod_rewrite module for generating the URLs
+# so we need to enable it if it's not
+sudo a2enmod rewrite
+
+# create a new apache2 virtual host file
+sudo nano /etc/apache2/sites-available/magento.localhost.com
+
+# configuration for our virtual domain:
+VirtualHost *:80>
+  ServerAdmin magento@locahost.com
+  ServerName magento.localhost.com
+  DocumentRoot /srv/www/magento_dev/public_html
+  
+  <Directory /srv/www/magento_dev/public_html/>
+    Options Indexes FollowSymlinks MultiViews
+    AllowOverride All
+    Order allow,deny
+    allow from all
+  </Directory>
+  ErrorLog /srv/www/magento_dev/logs/error.log
+  LogLevel warn
+</VirtualHost>
