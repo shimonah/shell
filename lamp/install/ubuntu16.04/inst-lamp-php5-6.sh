@@ -12,7 +12,7 @@ sudo apt update
 # Install php 5.6
 sudo apt install -y php5.6 php5.6-common
 # Install additional packages
-sudo apt install -y php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-gd php5.6-intl php5.6-xsl php5.6-zip
+sudo apt install -y php5.6-mcrypt php5.6-mbstring php5.6-curl php5.6-cli php5.6-mysql php5.6-soap php5.6-gd php5.6-intl php5.6-xsl php5.6-zip
 # Test PHP version
 php -v
 sudo systemctl restart apache2
