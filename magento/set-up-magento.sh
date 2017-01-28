@@ -43,3 +43,13 @@ VirtualHost *:80>
   ErrorLog /srv/www/magento_dev/logs/error.log
   LogLevel warn
 </VirtualHost>
+
+# Enable site and restart apache2
+sudo a2ensite magento.localhost.com
+
+# adding to hosts file
+sudo nano /etc/hosts
+192.168.36.1 magento.localhost.com
+
+# restart apache2
+sudo apache2ctl restart
