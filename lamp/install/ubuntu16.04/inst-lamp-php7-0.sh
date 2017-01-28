@@ -11,7 +11,7 @@ sudo add-apt-repository ppa:ondrej/php
 sudo apt update
 sudo apt install -y php7.0 php7.0-common
 # Install the additional packages
-sudo apt install -y libapache2-mod-php7.0 php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
+sudo apt install -y libapache2-mod-php7.0 php7.0-gd php7.0-mysql php7.0-mcrypt php7.0-soap php7.0-curl php7.0-intl php7.0-xsl php7.0-mbstring php7.0-zip php7.0-bcmath php7.0-iconv
 # Test PHP version
 php -v
 sudo systemctl restart apache2
