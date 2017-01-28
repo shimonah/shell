@@ -29,7 +29,7 @@ sudo a2enmod rewrite
 sudo nano /etc/apache2/sites-available/magento.localhost.com
 
 # configuration for our virtual domain:
-VirtualHost *:80>
+<VirtualHost *:80>
   ServerAdmin magento@locahost.com
   ServerName magento.localhost.com
   DocumentRoot /srv/www/magento_dev/public_html
