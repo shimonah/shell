@@ -31,10 +31,6 @@ sudo unzip phpMyAdmin-4.6.5.2-all-languages.zip
 sudo mv phpMyAdmin-4.6.5.2-all-languages phpmyadmin
 # Change premissions
 sudo chmod -R 0755 phpmyadmin
-#
-sudo adduser $USER www-data
-sudo chown $USER:www-data -R /var/www/html
-sudo chmod -R 775 /var/www/html
 # Notice
 echo '
 Things you must do yourself:
