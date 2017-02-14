@@ -25,3 +25,12 @@ sudo find . -type d -exec chmod 770 {} \; && sudo find . -type f -exec chmod 660
 cd /var/www/html/magento2
 # set permissions
 sudo chown -R alexey:www-data magento2
+
+#Creating user and database to magento2
+# enter mysql from command line where root is user
+mysql -u root -p
+
+# creating user 'mage' and 'magento_dev' database 
+mysql> CREATE USER 'mage'@'localhost' IDENTIFIED BY 'password';
+mysql> CREATE DATABASE magento_dev;
+mysql> GRANT ALL PRIVILEGES ON magento_dev.* TO 'mage'@'localhost';
