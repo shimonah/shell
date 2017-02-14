@@ -22,8 +22,8 @@ sudo chown -R :www-data .
 # Set permissions:
 sudo find . -type d -exec chmod 770 {} \; && sudo find . -type f -exec chmod 660 {} \; && sudo chmod u+x bin/magento
 # go to
-cd /var/www/html/magento2
-# set permissions
+cd ..
+# set permissions to magento2 directory
 sudo chown -R alexey:www-data magento2
 
 #Creating user and database to magento2
