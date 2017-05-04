@@ -11,7 +11,7 @@ sudo nano /etc/apache2/apache2.conf
 cd /var/www/html
 
 # create login/password
-sudo htpasswd -c .htpasswd username
+sudo htpasswd -c .htpasswd (username)
 # you need to enter password for username(login)
 
 # then create file
@@ -21,7 +21,7 @@ touch .htaccess
 AuthType Basic
 AuthName "Private Area"
 AuthUserFile /var/www/html/.htpasswd
-Require valid-user
+Require user (username)
 
 # restart apache server
 sudo systemctl restart apache2
