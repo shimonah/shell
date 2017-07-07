@@ -1,4 +1,6 @@
-# How to create basic authentication for /var/www/html folder and phpmyadmin
+##
+## How to create basic authentication for /var/www/html folder and phpmyadmin
+##
 
 # create file
 sudo touch /etc/apache2/auth.conf
