@@ -1,27 +1,40 @@
-# edit apache file
-sudo nano /etc/apache2/apache2.conf
+# How to create basic authentication for /var/www/html folder and phpmyadmin
 
-# add lines
+# create file
+sudo touch /etc/apache2/auth.conf
+
+# edit this file "/etc/apache2/auth.conf"
+sudo nano /etc/apache2/auth.conf
+
+# add lines (this option looks for .htaccess files in this directories)
 <Directory /var/www/html>
         Options Indexes FollowSymLinks
         AllowOverride All
 </Directory>
 
-# go to
-cd /var/www/html
+<Directory /usr/share/phpmyadmin>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+</Directory>
 
-# create login/password
-sudo htpasswd -c .htpasswd (username)
-# you need to enter password for username(login)
+# create .htaccess files in this directories
+sudo touch /var/www/html/.htaccess
+sudo touch /usr/share/phpmyadmin/.htaccess
 
-# then create file
-touch .htaccess
-
-# edit file, add lines
+# add this lines to files (code for all two files is same)
 AuthType Basic
 AuthName "Private Area"
 AuthUserFile /var/www/html/.htpasswd
-Require user (username)
+Require user username
+
+# create .htpasswd file in each directory and enter password
+sudo htpasswd -c .htpasswd (username)
+
+# edit apache file
+sudo nano /etc/apache2/apache2.conf
+
+# and add this lines to "/etc/apache2/apache2.conf"
+Include auth.conf
 
 # restart apache server
 sudo systemctl restart apache2
