@@ -5,7 +5,7 @@ sudo /etc/init.d/mysql stop
 sudo cp -R -p /var/lib/mysql /newpath
 
 #edit the MySQL configuration file with the following command:
-/etc/mysql/mysql.conf.d/mysqld.cnf
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
 #or perhaps 
 sudo nano /etc/mysql/my.cnf
 
