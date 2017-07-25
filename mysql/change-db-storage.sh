@@ -5,7 +5,9 @@ sudo /etc/init.d/mysql stop
 sudo cp -R -p /var/lib/mysql /newpath
 
 #edit the MySQL configuration file with the following command:
-sudo nano /etc/mysql/my.cnf   # or perhaps /etc/mysql/mysql.conf.d/mysqld.cnf
+/etc/mysql/mysql.conf.d/mysqld.cnf
+#or perhaps 
+sudo nano /etc/mysql/my.cnf
 
 #Look for the entry for datadir, and change the path (which should be /var/lib/mysql) to the new data directory.
 #In the terminal, enter the command:
