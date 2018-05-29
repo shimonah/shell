@@ -11,7 +11,7 @@ nano /etc/php/7.0/mods-available/xdebug.ini
 xdebug.show_error_trace = 1
 xdebug.remote_enable=on
 xdebug.default_enable=on
-xdebug.remote_autostart=off
+xdebug.remote_autostart=on
 xdebug.remote_port=9000
 xdebug.remote_host=localhost
 xdebug.profiler_enable_trigger=1
