@@ -12,7 +12,7 @@ sudo rabbitmqctl add_user alex_rmq root
 sudo rabbitmqctl set_user_tags alex_rmq administrator
 # login to rabbitMQ via UI to test user accesss
 -
-# add this configuration array item for env.php, 5672 is default port
+# for magento 2 add this configuration array item for env.php, 5672 is default port
 'queue' => [
         'amqp' => [
             'host' => 'localhost',
