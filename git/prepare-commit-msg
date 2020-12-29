@@ -1,0 +1,84 @@
+#!/bin/bash
+
+# assuming that .jira-keys file is placed in project root folder
+if ! [ -s .jira-keys ]
+then
+    echo "Aborting commit."
+    echo ".jira-keys file is empty or does not exist."
+    echo "Add allowed project keys to .jira-keys file in root folder."
+    exit 1
+fi
+
+readarray -t projects_array < .jira-keys
+
+function join { local IFS="$1"; shift; echo "$*"; }
+
+projects_string=$(join \| ${projects_array[@]})
+
+message_regex="(^($projects_string)-[0-9]+: [a-zA-Z].+\.$|^Merge )"
+
+if ! grep -iqE "$message_regex" "$1"
+then
+    echo "Aborting commit."
+    echo "Your commit message should satisfy the next pattern:"
+    echo "**************************************"
+    echo "* ABC-123: Add some awesome feature. *"
+    echo "**************************************"
+    echo "Where ABC is allowed project key."
+    echo ""
+    echo "Current allowed project keys:"
+    cat .jira-keys
+    exit 1
+fi
+
+#################################### Developer check
+
+# assuming that .jira-keys file is placed in project root folder
+if ! [ -s .domains ]
+then
+    echo "Aborting commit."
+    echo ".domains file is empty or does not exist."
+    echo "Add allowed email domains to .domains file in root folder."
+    exit 1
+fi
+
+readarray -t domains_array < .domains
+
+function join { local IFS="$1"; shift; echo "$*"; }
+
+domains_string=$(join \| ${domains_array[@]})
+
+user_email=$(git config --get user.email)
+user_email_regex="@($domains_string)$"
+
+if ! [[ $user_email =~ $user_email_regex ]]
+then
+    echo "Aborting commit."
+    echo "Change your user git config settings."
+    echo ""
+    echo "Domain in your user.email should be one from the allowed domain list:"
+    cat .domains
+    echo ""
+    echo "Your user.email:"
+    echo "${user_email}"
+    exit 1
+fi
+
+user_name=$(git config --get user.name)
+user_name_regex="^[A-Z][a-z]* [A-Z][a-z]*$"
+
+if ! [[ $user_name =~ $user_name_regex ]]
+then
+    echo "Aborting commit."
+    echo "Check your user git config settings."
+    echo ""
+    echo "Your user.name should have letters only and satisfy the next pattern:"
+    echo "****************"
+    echo "* Name Surname *"
+    echo "****************"
+    echo ""
+    echo "Your user.name:"
+    echo "${user_name}"
+    exit 1
+fi
+
