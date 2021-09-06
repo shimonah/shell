@@ -1,2 +1,2 @@
 # shell
-Files with shell scripts and aliases for applications.H
+Files with shell scripts and aliases for applications.
